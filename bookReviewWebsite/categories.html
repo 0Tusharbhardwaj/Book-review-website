@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookVerse - Categories</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #1a2b3c;
+        --secondary-color: #34495e;
+        --accent-color: #2ecc71;
+        --text-primary: #333;
+        --text-light: #fff;
+        --background-soft: #f4f6f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--background-soft);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 15px 8%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-light);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .category-card a {
+        text-decoration: none;
+      }
+
+      .categories-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+
+      .categories-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .category-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .category-icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 15px;
+      }
+
+      .category-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .category-description {
+        color: var(--secondary-color);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--dark-color);
+        background-color: #1a2b3c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+      }
+
+      @media screen and (max-width: 768px) {
+        .category-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="review.html">Reviews</a>
+          <a href="categories.html">Categories</a>
+          <a href="submit_review.html">Submit Review</a>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="categories-container">
+        <div class="categories-header">
+          <h1>Book Categories</h1>
+          <p>Explore diverse literary genres and find your next great read</p>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A4149493031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_15"
+                >📖</a
+              >
+            </div>
+            <h2 class="category-title">History</h2>
+            <p class="category-description">
+              Immersive storytelling and factual narratives
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A4149708031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_27"
+                >🧠</a
+              >
+            </div>
+            <h2 class="category-title">Science and Mathematics</h2>
+            <p class="category-description">
+              Real-world insights and factual exploration
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A1318161031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_9"
+                >🔍</a
+              >
+            </div>
+            <h2 class="category-title">Mystery</h2>
+            <p class="category-description">
+              Thrilling detective and crime narratives
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A1318168031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_25"
+                >❤️</a
+              >
+            </div>
+            <h2 class="category-title">Romance</h2>
+            <p class="category-description">
+              Emotional and passionate love stories
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A1402038031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_28"
+                >🚀</a
+              >
+            </div>
+            <h2 class="category-title">Sci-Fi</h2>
+            <p class="category-description">
+              Futuristic and speculative world-building
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?rh=n%3A976389031%2Cn%3A1318128031&dc&qid=1733666668&rnid=976389031&ref=sr_nr_n_12"
+                >🌱</a
+              >
+            </div>
+            <h2 class="category-title">Self-Improvement</h2>
+            <p class="category-description">
+              Personal growth and motivational reads
+            </p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?k=amazon+book&i=stripbooks&rh=n%3A976389031%2Cn%3A22960344031&dc&adgrpid=1317216539318996&hvadid=82326303263779&hvbmt=bp&hvdev=c&hvlocphy=149715&hvnetw=o&hvqmt=p&hvtargid=kwd-82326915905593%3Aloc-90&hydadcr=23643_2291801&msclkid=32dbff8a5c971df19ef898d20186d9a6&qid=1733844279&rnid=976389031&tag=msndeskstdin-21&ref=sr_nr_n_10&ds=v1%3At3e5KgP7w%2FvRqKJPW6bYyij59DyXx7CW0HdFTV6hf7U "
+                >🧑‍🔬</a
+              >
+            </div>
+            <h2 class="category-title">Engineering</h2>
+            <p class="category-description">explorationof Unknown World</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <a
+                href="https://www.amazon.in/s?k=amazon+book&i=stripbooks&rh=n%3A976389031%2Cn%3A1318104031&dc&adgrpid=1317216539318996&hvadid=82326303263779&hvbmt=bp&hvdev=c&hvlocphy=149715&hvnetw=o&hvqmt=p&hvtargid=kwd-82326915905593%3Aloc-90&hydadcr=23643_2291801&msclkid=32dbff8a5c971df19ef898d20186d9a6&qid=1733844279&rnid=976389031&tag=msndeskstdin-21&ref=sr_nr_n_6&ds=v1%3AFnK8RJ9Pz%2FJOdCPjbEvZS6lSrZnWAazWbIdA2%2FldV0w"
+                >🧸</a
+              >
+            </div>
+            <h2 class="category-title">Comics and Graphic Novels</h2>
+            <p class="category-description">Mental Relief and Refreshment</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+     <!-- Footer -->
+     <footer class="footer" id="contact">
+      <h2>Get In Touch</h2>
+      <p>Feel free to reach out for collaborations or opportunities</p>
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/vansh-agarwal-0a449a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/VANSH-AGARWAL9264" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://x.com/3pm2022vansh?t=RpJyfoP1SUfLRTlWdPPhww&s=08"
+          target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/v.k.agarwal1101/profilecard/?igsh=amRybXBvc2Z2eWk0"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <p style="margin-top: 20px">
+        &copy; 2024 BookVerse. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

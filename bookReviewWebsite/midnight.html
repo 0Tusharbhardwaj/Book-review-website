@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Money_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>Freedom-at-Midnight</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Raman singh</em></span>
+                        <span class="rating">★★★★</span>
+                    </div>
+                    <p class="review-excerpt">Although print of the book was very poor but
+                        The book Freedom at Midnight by Dominique Lapierre and Larry Collins is a masterful account of one of the most pivotal periods in modern history—the final year of British rule in India and the subsequent partition in 1947. The authors, through meticulous research and engaging storytelling, bring to life the complex web of political maneuvering, cultural upheaval, and human emotion that defined this era. <br><br>
+                        
+                        What sets this book apart is the unparalleled access the authors had to key historical figures, including Lord Louis Mountbatten, the last Viceroy of India. This unique perspective allows readers to gain an intimate understanding of the intense pressures and critical decisions that shaped the subcontinent’s destiny. The vivid descriptions make historical events feel immediate and personal, from the delicate negotiations between leaders like Gandhi, Nehru, and Jinnah to the heartrending experiences of ordinary people caught in the crossfire of communal violence. <br><br>
+                        
+                        The activities of Princes in their princely state are written in so much detail. The narrative is both educational and deeply moving. It highlights the heroism, the failures, and the sacrifices that accompanied India's birth as an independent nation. Lapierre and Collins' portrayal of Gandhi’s steadfast commitment to peace and Mountbatten’s complicated role adds layers of nuance to well-known historical accounts. <br><br>
+                        
+                        Whether you're a history enthusiast or a casual reader, Freedom at Midnight provides a captivating journey into a momentous chapter that reshaped the world. It is a testament to the power of storytelling that intertwines grand historical events with the human stories at their heart. This book is an essential read for those who wish to understand the complexities of India's independence and the lasting impact of partition.
+                        </p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Alu Arjun</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">The book I read in 1974/75, read it again now 45 years later, and narrating it to my wife, it’s most wonderful tribute to India , Mahatma Gandhi and millions of Indians, it’s a classic for those interested in the real history of India during those tumultuous days</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>Randi Otan</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">For a person belonging to the post-partition generation of Independent India, this book is a revelation of both how much the events at the time of Independence were fortuitous, but also where the fires of sectarianism can lead a country and how a critical mass of emotive citizenry can lead to complete overwhelming of the state. <br><br>
+                            This book also gives us a portrait of the different leaders of the time, and without fear or favour, shows both their follies and their statesmanship in its true factual form, enabling the reader to draw their own conclusions.
+                            Great book. A must read for all from the subcontinent.</p>
+                </div>
+            </div><br><br>
+</body>
+</html>

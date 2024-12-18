@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and external stylesheets -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookVerse - Home</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS for styling the webpage -->
+    <style>
+      /* Root variables for maintaining consistent theming */
+      :root {
+        --primary-color: #1a2b3c;
+        --secondary-color: #34495e;
+        --accent-color: #2ecc71;
+        --text-primary: #333;
+        --text-light: #fff;
+        --background-soft: #f4f6f8;
+      }
+
+      /* Universal reset for consistent styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling for font and background */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--background-soft);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 15px 8%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-light);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Hero section styles */
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 8%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: var(--text-light);
+      }
+
+      .hero-content {
+        flex: 1;
+        padding-right: 50px;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--accent-color);
+        color: var(--text-light);
+        text-decoration: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Featured books grid styles */
+      .featured-books {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 50px 8%;
+      }
+
+      .book-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .book-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .book-card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      .book-details {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Footer styles */
+      .footer {
+        background-color: var(--dark-color);
+        background-color: #1a2b3c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+      }
+
+      .head {
+        background-color: #232f3e;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .search-container {
+        display: flex;
+        width: 80%;
+        margin-top: 1em;
+      }
+
+      #searchBar {
+        width: 80%;
+        padding: 0.75em;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #searchButton {
+        width: 20%;
+        padding: 0.75em;
+        background-color: #febd69;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #searchButton:hover {
+        background-color: #f3a847;
+      }
+
+      #bookList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #bookList li {
+        padding: 0.5em;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #bookList li a {
+        text-decoration: none;
+        color: #232f3e;
+        font-weight: bold;
+      }
+
+      #bookList li a:hover {
+        color: #febd69;
+      }
+
+      /* Responsive design for smaller screens */
+      @media screen and (max-width: 768px) {
+        .hero-section {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-content {
+          padding-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header section containing navigation bar -->
+    <header>
+      <nav class="navbar">
+        <!-- Branding -->
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+
+        <!-- Navigation links -->
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="review.html">Reviews</a>
+          <a href="categories.html">Categories</a>
+          <a href="submit_review.html">Submit Review</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero section for welcome message -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Discover Your Next Favorite Book</h1>
+          <p>
+            Dive into a world of comprehensive book reviews, expert
+            recommendations, and literary insights.
+          </p>
+          <a href="review.html" class="cta-button">Explore Reviews</a>
+        </div>
+        <div class="hero-image">
+          <a href="#one"><img
+            src="assets/frontbook.webp"
+            height="400"
+            width="700"
+            alt="Book Collection" 
+          /></a>
+        </div>
+      </section>
+
+      <!--Search bar using java script-->
+      <section>
+        <div class="head">
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchBar"
+              placeholder="Search for a book..."
+              onkeyup="searchBook()"
+              onkeydown="handleEnter(event)"
+            />
+            <button
+              type="button"
+              id="searchButton"
+              onclick="redirectToReview()"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <ul id="bookList">
+            <li data-title="The Silent Patient">
+              <a href="silent-review.html">The Silent Patient</a>
+            </li>
+            <li data-title="Atomic Habits">
+              <a href="atomic-review.html">Atomic Habits</a>
+            </li>
+            <li data-title="The Psychology of Money">
+              <a href="money-review.html">The Psychology of Money</a>
+            </li>
+            <li data-title="IKIGAI">
+              <a href="japanese.html">IKIGAI</a>
+            </li>
+            <li data-title="Wings Of Fire">
+              <a href="fire.html">Wings Of Fire</a>
+            </li>
+            <li data-title="Freedom-at-Midnight">
+              <a href="midnight.html">Freedom-at-Midnight</a>
+            </li>
+            <li data-title="The Impact Of Influence">
+              <a href="midnight.html">The Impact Of Influence</a>
+            </li>
+            <li data-title="Becoming a person of Influence">
+              <a href="midnight.html">Becoming a person of Influence</a>
+            </li>
+            <li data-title="How To Win Friends And Influence People">
+              <a href="midnight.html"
+                >How To Win Friends And Influence People</a
+              >
+            </li>
+            <!-- Add more book items with corresponding links here -->
+          </ul>
+        </div>
+
+        <script src="script.js"></script>
+      </section>
+
+      <!-- Featured books section -->
+      <section class="featured-books" id="one">
+        <!-- Individual book cards -->
+        <div class="book-card">
+          <img src="assets/silent.webp" alt="Book Cover" />
+          <div class="book-details">
+            <h3>The Silent Patient</h3>
+            <p>Psychological Thriller</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/atomic.webp" alt="Book Cover" />
+          <div class="book-details">
+            <h3>Atomic Habits</h3>
+            <p>Self-Improvement</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/money.jpg" alt="Book Cover" />
+          <div class="book-details">
+            <h3>The Psychology of Money</h3>
+            <p>Finance</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/ikigai.jpg" alt="Book Cover" />
+          <div class="book-details">
+            <h3>Ikigai</h3>
+            <p>Secret of Happiness</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/wings of fire.jpg" alt="Book Cover" />
+          <div class="book-details">
+            <h3>Wings of fire</h3>
+            <p>Autobiography</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/Freedom-at-Midnight.jpg" alt="Book Cover" />
+          <div class="book-details">
+            <h3>Freedom-at-Midnight</h3>
+            <p>Indian independence</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/THE IMPACT OF INFLUENCE.webp" alt="Book Cover" />
+          <div class="book-details">
+            <h3>THE IMPACT OF INFLUENCE</h3>
+            <p>Self-Improvement</p>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="assets/HOW TO WIN.jpg" alt="Book Cover" />
+          <div class="book-details">
+            <h3>How to win friends and influence people</h3>
+            <p>Self-Improvement</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    T
+    <!-- Footer section -->
+    <footer class="footer" id="contact">
+      <h2>Get In Touch</h2>
+      <p>Feel free to reach out for collaborations or opportunities</p>
+
+      <!-- Social media icons -->
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/vansh-agarwal-0a449a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/VANSH-AGARWAL9264" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://x.com/3pm2022vansh?t=RpJyfoP1SUfLRTlWdPPhww&s=08"
+          target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/v.k.agarwal1101/profilecard/?igsh=amRybXBvc2Z2eWk0"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <p style="margin-top: 20px">
+        &copy; 2024 BookVerse. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

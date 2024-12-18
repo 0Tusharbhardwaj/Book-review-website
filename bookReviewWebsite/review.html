@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookVerse - Reviews</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS Variables and Base Styles (Same as Home Page) */
+      :root {
+        --primary-color: #1a2b3c;
+        --secondary-color: #34495e;
+        --accent-color: #2ecc71;
+        --text-primary: #333;
+        --text-light: #fff;
+        --background-soft: #f4f6f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--background-soft);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+
+      /* Navigation and Reusable Styles from Home Page */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 15px 8%;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--text-light);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        color: var(--text-light);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--accent-color);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Reviews Page Specific Styles */
+      .reviews-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+
+      .review-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .review-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .review-card:hover {
+        transform: scale(1.05);
+      }
+
+      .review-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .review-content {
+        padding: 20px;
+      }
+
+      .review-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .review-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: var(--secondary-color);
+      }
+
+      .rating {
+        color: #f39c12;
+      }
+
+      .review-excerpt {
+        color: var(--text-primary);
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 15px;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--dark-color);
+        background-color: #1a2b3c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        margin: 0 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+      }
+
+      @media screen and (max-width: 768px) {
+        .review-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="review.html">Reviews</a>
+          <a href="categories.html">Categories</a>
+          <a href="submit_review.html">Submit Review</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="reviews-container">
+        <div class="review-header">
+          <h1>Latest Book Reviews</h1>
+          <p>
+            Discover in-depth insights and expert opinions on the latest
+            literary works.
+          </p>
+        </div>
+
+        <div class="review-grid">
+          <div class="review-card">
+            <img
+              src="assets/silent.webp"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">The Silent Patient</h2>
+              <div class="review-meta">
+                <span>Alex Johnson</span>
+                <span class="rating">★★★★½</span>
+              </div>
+              <p class="review-excerpt">
+                A gripping psychological thriller that keeps you on the edge of
+                your seat...
+              </p>
+              <a href="silent-review.html" class="read-more"
+                >Read Full Review</a
+              >
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/atomic.webp"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">Atomic Habits</h2>
+              <div class="review-meta">
+                <span>Sarah Williams</span>
+                <span class="rating">★★★★★</span>
+              </div>
+              <p class="review-excerpt">
+                A transformative guide to building better habits and breaking
+                bad ones...
+              </p>
+              <a href="atomic-review.html" class="read-more"
+                >Read Full Review</a
+              >
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/money.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">The Psychology of Money</h2>
+              <div class="review-meta">
+                <span>Michael Chen</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                An insightful exploration of financial behavior and
+                decision-making...
+              </p>
+              <a href="money-review.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+          
+          <div class="review-card">
+            <img
+              src="assets/ikigai.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">Ikigai</h2>
+              <div class="review-meta">
+                <span>HÉCTOR GARCÍA</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                "Ikigai: The Japanese Secret to a Long and Happy Life" is a
+                remarkable book that explores the concept ...
+              </p>
+              <a href="japanese.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/wings of fire.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">Wings of fire</h2>
+              <div class="review-meta">
+                <span>Kalam Raju</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                Every common man who by his sheer grit and hard work achieves success should share his story ...
+              </p>
+              <a href="fire.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/Freedom-at-Midnight.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">Freedom-at-Midnight</h2>
+              <div class="review-meta">
+                <span>Raman singh</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                Although print of the book was very poor but
+The book Freedom at Midnight by Dominique Lapierre and Larry Collins is a masterful account of...
+              </p>
+              <a href="midnight.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/THE IMPACT OF INFLUENCE.webp"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">THE IMPACT OF INFLUENCE</h2>
+              <div class="review-meta">
+                <span>HERRY JERRY</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                Every book has it's onw importance but this book gave me something very interesting...
+              </p>
+              <a href="midnight.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/becoming.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">Becoming a person of Influence</h2>
+              <div class="review-meta">
+                <span>Jony dary</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                Good book to read and very great but this book gave me something very interesting...
+              </p>
+              <a href="midnight.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="assets/HOW TO WIN.jpg"
+              alt="Book Review"
+              class="review-image"
+            />
+            <div class="review-content">
+              <h2 class="review-title">How To Win Friends And Influence People</h2>
+              <div class="review-meta">
+                <span>jemini A.I.</span>
+                <span class="rating">★★★★¾</span>
+              </div>
+              <p class="review-excerpt">
+                Influencing some is an art of doing control on Anyone and this book looks so interesting ...
+              </p>
+              <a href="midnight.html" class="read-more">Read Full Review</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+     <!-- Footer -->
+     <footer class="footer" id="contact">
+      <h2>Get In Touch</h2>
+      <p>Feel free to reach out for collaborations or opportunities</p>
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/vansh-agarwal-0a449a328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/VANSH-AGARWAL9264" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://x.com/3pm2022vansh?t=RpJyfoP1SUfLRTlWdPPhww&s=08"
+          target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/v.k.agarwal1101/profilecard/?igsh=amRybXBvc2Z2eWk0"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <p style="margin-top: 20px">
+        &copy; 2024 BookVerse. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

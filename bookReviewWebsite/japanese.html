@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Money_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>Ikigai</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>HÉCTOR GARCÍA</em></span>
+                        <span class="rating">★★★★</span>
+                    </div>
+                    <p class="review-excerpt">"Ikigai: The Japanese Secret to a Long and Happy Life" is a remarkable book that explores the concept of ikigai and provides valuable insights into living a fulfilling and purposeful life. As a reader of this book, I am thrilled to give it a perfect rating for its exceptional content, profound wisdom, and overall satisfaction it provides. <br><br>
+
+                        One of the standout features of this book is its ability to delve into the essence of ikigai. The authors present a comprehensive understanding of ikigai as the intersection of four fundamental elements: what you love, what you are good at, what the world needs, and what you can be rewarded for. Through a thoughtful exploration of these elements, the book guides readers toward discovering their own ikigai and embracing a life filled with purpose and meaning. <br><br>
+                        
+                        The insights shared in "Ikigai" are deeply rooted in Japanese culture and wisdom. The authors draw from the experiences of individuals in the Japanese community of Ogimi, known for its high concentration of centenarians, who have found a sense of purpose and fulfillment in their lives. The book offers valuable lessons and practices that can be applied by readers from all walks of life. <br><br>
+                        
+                        The writing style is engaging and accessible, making complex concepts easy to understand and apply. The authors incorporate personal stories, scientific research, and practical exercises to support the exploration of ikigai. The book encourages self-reflection and invites readers to delve into their passions, talents, and values to uncover their unique purpose.</p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Priya Pathak</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">Ikigai means "Life to be worthwhile" or "Purposeful Life" <br><br>
+
+                        Japan has highest life expectancy in world and a region named Okinawa in Japan even have higher life expectancy than national average. There is a town in Okinawa named Ogimi also known as Village of longevity where if someone has 80yr of age then people will say ये तो बच्चा है अभी 😂 because touching 100 is norm there and this book Ikigai study lifestyle of people of Japan/Okinawa/Ogimi <br><br>
+                        
+                        So why they live longer 🤔.. and one thing that is common is they have purpose in their life 😀, they have found their ikigai which give meaning to their life. Although there are other factors too but finding life's ikigai is most important. 🤗.. <br><br>
+                        
+                        Book includes interview of people who have age of 100yr or more and that part of book is very beautiful. Those rich minds give very basic advises about life which help them in living longer... <br><br>
+                        
+                        • Most Important :- Find something which you love doing.. whatever it is... This is secret of long life, doing things you love... that is your ikigai 😍 <br><br>
+                        
+                        • Stay close to nature <br><br>
+                        
+                        • socialize with people whom you love or who loves you👥👫 <br><br>
+                        
+                        • always eat 80% of hunger 🍝 <br><br>
+                        
+                        • never retire in your life even if you have retired professionally 🕺🕺 <br><br>
+                        
+                        • keep smiling 🤣🤣 <br><br>
+                        
+                        • eat vegetable🍇🍈 <br><br>
+                        
+                        • keep moving/exercise because sedentary lifestyle accelerate aging process. 🏃🏃 <br><br>
+                        
+                        • 1 day fasting in a week <br><br>
+                        
+                        • 1 day detox in a week from SocialMedia/Smartphone <br><br>
+                        
+                        and finally a beautiful quote from book that sums up all ... <br><br>
+                        
+                        "Life is not a problem to be solved. Just remember to have something that keeps you busy doing what you love while being surrounding by the people who loves you</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>Roman cesis</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">Great book for life!! Highly recommended. Transformational and helps you admire and love your life like never before. ❤️ Love it!!</p>
+                </div>
+            </div><br><br>
+</body>
+</html>

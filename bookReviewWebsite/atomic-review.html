@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic-Habits_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>Atomic Habits</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Dr. ADAM</em></span>
+                        <span class="rating">★★★★</span>
+                    </div>
+                    <p class="review-excerpt">James Clear has made a powerful case to adopt good Habits, and at the same time, discard bad Habits!! <br><br>
+                        The logic presented is awesome!! The ideas are captivating, and lucidly presented!! The pneumonics spread all over the book, make it so easy to commit the key ideas to memory!!
+                        i have already recommended this awesome book to all my friends!!
+                        Dr ADAM Ahuja, Bangalore, India <br><br>
+                        
+                        I'd rate this book 4.5/5 stars for its captivating storyline and impressive writing. Additionally, I'd give 5 stars for the delivery, which was prompt and secure. Overall, I'm thoroughly satisfied with my reading experience and would definitely recommend this thriller to fellow book enthusiasts!"</p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Nibir Biswas</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">"Atomic Habits" is an exceptional book that offers valuable insights and practical strategies for transforming your habits and, in turn, your life. As a reader of this book, I am thrilled to give it a perfect rating for its exceptional content, actionable advice, and overall satisfaction it provides. <br><br>
+
+                        One of the standout features of this book is its ability to break down the science of habit formation into practical and actionable steps. James Clear, the author, explains the concept of atomic habits, which are small, incremental changes that have a compounding effect over time. This approach makes habit change more manageable and sustainable. <br><br>
+                        
+                        The book offers a comprehensive framework for understanding and implementing effective habits. Clear dives deep into the psychology behind habit formation, exploring topics such as cue, craving, response, and reward. He provides practical strategies for creating and reinforcing positive habits while breaking free from negative one!</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>Virat Kohli</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">The book is thick and heavy. It took me a while to finish the book. But every strategies mentioned in the book was practical and very much doable. After reading this book, I have tried implementing some of the strategies and really found it helpful!</p>
+                </div>
+            </div><br><br>
+</body>
+</html>

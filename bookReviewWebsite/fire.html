@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Money_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>Wings of fire</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Kalam Raju</em></span>
+                        <span class="rating">★★★★</span>
+                    </div>
+                    <p class="review-excerpt">Every common man who by his sheer grit and hard work achieves success should share his story with the rest for they may find inspiration and strength to go on, in his story. The 'Wings of Fire' is one such autobiography by visionary scientist Dr. APJ Abdul Kalam, who from very humble beginnings rose to be the President of India. The book is full of insights, personal moments and life experiences of Dr. Kalam. It gives us an understanding on his journey of success. <br><br>
+
+                        Dr. Kalam by narrating his life journey evokes the reader to identify with one’s inner fire and potential, for he was of the firm belief that each one of us was born with the strength and potential to make a tangible change in the world. How he inspired himself to achieve dreams and how he went about accomplishing so much is what the book captures nicely. <br><br>
+                        
+                        The book recollects many anecdotes and stories from childhood, his time at school and college. The time spent at the Langley Research Center, NASA and Wallops Flight Facility gets a lot of attention. <br><br>
+                        
+                        Personal tragedies have not been left out. The time when he lost his father and how he felt when conferred with many awards like the Padma Bhushan have been written in much detail. <br><br>
+                        
+                        The second half of the book deals with Dr Kalam, the scientist who made a significant contribution in developing the countries guided missile program, a pioneering effort for the security of the nation. It's not with reason that he was nicknamed as the 'Missile Man of India'. The book also contains 24 photographs at various stages of his life.</p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>aman sicazi</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">It was indeed a good book to read and learn about some inspirational/motivational quotes from none other but about The legend APJ Abdul Kalam .. <br><br>
+                        After learning about the journey of life from Rameshwaram till he retire .. it gives me a goosebumps and another level of attitude how to embark my life ahead .. <br><br>
+                        
+                        It teaches how to be motivated and stand on your feet even though all the odds are against us .. and to ignore the pressure of someone try to lead our life .. <br><br>
+                        Thank you Arun Tiwary for this golden book that you published.</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>modi mandy</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">Highly recommended. Transformational and helps you admire and love your life like never before. ❤️ Love from my side it!!</p>
+                </div>
+            </div><br><br>
+</body>
+</html>

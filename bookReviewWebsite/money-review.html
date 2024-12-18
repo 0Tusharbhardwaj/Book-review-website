@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Psychology of Money_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>The Psychology of Money</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Mr. laury</em></span>
+                        <span class="rating">★★★★</span>
+                    </div>
+                    <p class="review-excerpt">In a world brimming with financial advice, Morgan Housel's "The Psychology of Money" stands out as a beacon of clarity and wisdom. It's not a book about investment strategies or complex financial models; it's a profound exploration of the human mind and its intricate relationship with money. <br><br>
+
+                        Housel masterfully weaves together captivating anecdotes, historical insights, and psychological principles to paint a vivid picture of how our emotions, biases, and experiences shape our financial decisions. He debunks common myths and misconceptions, revealing the counterintuitive forces that often drive our financial behavior. <br><br>
+                        
+                        The book's brilliance lies in its ability to transform complex financial concepts into relatable narratives that resonate with readers of all backgrounds. Housel's writing is engaging, insightful, and devoid of jargon, making it a delightful read for anyone seeking to improve their financial understanding. <br><br>
+                        
+                        "The Psychology of Money" is not a get-rich-quick scheme or a collection of investment tips. Instead, it's a journey of self-discovery, guiding readers to examine their own financial habits and make informed decisions based on a deeper understanding of their own psychology.</p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Cesar Penna</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">Este é um livro sobre como você se relaciona com o dinheiro. Não apenas sobre como você investe, mas sobre o que te faz gastar e o que te faz querer mais. Sobre quando gasta, o que espera sentir e como você pode se planejar para o futuro. A abordagem não é calculista, muito pelo contrário, ela é humana. <br><br>
+
+                        Vemos diariamente pessoas nos dizendo como ficar milionários fazendo investimentos. Morgan Housel dá uma dica muito importante: descubra qual jogo cada um está jogando e tente identificar se o jogo da pessoa que está te dando conselhos é diferente do seu. <br><br>
+                        
+                        Você vive fazendo o jogo de surfar no "momento" dos investimentos que hoje estão em alta e fazer uma "grana rápida" ? Você investe pensando em qual horizonte de tempo: meses, anos, década, ou no dia de hoje? <br><br>
+                        
+                        Como você lida com riscos?</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>Roman Reinje</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">The book is thick and heavy. It took me a while to finish the book. But every strategies mentioned in the book was practical and very much doable. After reading this book, I have tried implementing some of the strategies and really found it helpful!</p>
+                </div>
+            </div><br><br>
+</body>
+</html>

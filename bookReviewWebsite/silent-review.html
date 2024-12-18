@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent-Patient_Reviews</title>
+    <style>
+        /* CSS Variables and Base Styles (Same as Home Page) */
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #34495e;
+            --accent-color: #2ecc71;
+            --text-primary: #333;
+            --text-light: #fff;
+            --background-soft: #f4f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-soft);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation and Reusable Styles from Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            padding: 15px 8%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Reviews Page Specific Styles */
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 20px;
+        }
+
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .rating {
+            color: #f39c12;
+        }
+
+        .review-excerpt {
+            color: var(--text-primary);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">BookVerse</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+            <a href="categories.html">Categories</a>
+            <a href="submit_review.html">Submit Review</a>
+        </div>
+    </nav>
+
+    <div class="reviews-container">
+        <div class="review-header">
+            <h1>The Silent Patient</h1>
+            <p>Discover in-depth insights and expert opinions on the latest literary works.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Hemamalini Khurana</em></span>
+                        <span class="rating">★★★★½</span>
+                    </div>
+                    <p class="review-excerpt">It is a great thriller to read and if you are beginner at reading you can go for it without any doubt. I copleted it in 5 days and really enjoyed it. I will give it 4.5/5 and 5 stars for dilevery. I got this in time and safely Here's an enhanced and corrected version of the review: <br><br>
+
+                        "This is an exceptional thriller that I highly recommend, especially for beginners. The engaging narrative had me hooked from start to finish, and I completed the book in just 5 days. The twists and turns kept me on the edge of my seat, making it an absolute page-turner. <br><br>
+                        
+                        I'd rate this book 4.5/5 stars for its captivating storyline and impressive writing. Additionally, I'd give 5 stars for the delivery, which was prompt and secure. Overall, I'm thoroughly satisfied with my reading experience and would definitely recommend this thriller to fellow book enthusiasts!"</p>
+            </div>
+        </div><br><br>
+
+        <div class="review-card">
+            <div class="review-content">
+                <div class="review-meta">
+                        <span><em>Alex Johnson</em></span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <p class="review-excerpt">“Only she knows what happened. Only I can make her speak.”<br><br>
+
+                        These words were enough to draw my attention to this book. When I got my hands on it, I didn’t have many expectations. Given the hype, I kept myself grounded because I didn’t want to be let down. I was not very invested in the beginning but after some time it was hard to keep the book aside. It was an amazing experience reading this book. <br><br>
+                        
+                        “The Silent Patient” is masterfully written, and I have to say I’m not disappointed. It was thrilling, mind-boggling, and pretty intense, to be honest. I lived through the book, and it left me in awe in the end. <br><br>
+                        
+                        Alicia Berenson the woman who murdered her husband and went silent after that, was taken to a mental hospital afterwards. No one could make her talk and with the time people lost interest in her. She was invisible in the hospital. Until one day Theo Faber joined the hospital as a Psychotherapist, who becomes obsessed with Alicia’s silence trying to uncover the truth behind the mystery. As much as he delves into Alicia’s life and uncovers many hidden aspects, he finds himself trapped in the web of obsession and Unexpected twists. <br><br>
+                        
+                        Alex Michaelides has crafted this book. He weaved the story very neatly with precision and quality. <br>
+                        It was an absolute page-turner that kept me hanging in there, thinking “Okay what’s next now”. The writing is sharp and compelling, it has great depth and it is very intriguing Which kept me hooked until the last page. The definition of unexpected twist I have to say. <br><br>
+                        
+                        I was particularly drawn to the book’s dual narrative. Despite the alternating perspectives between Alicia’s diary and Theo’s narration, the continuity of the story was effectively maintained. This contributed to a consistent sense of suspense and tension throughout the book. It was written very meticulously. I loved how it explores the themes of trauma, trust and obsession. And also how it deeply explored art, Psychology and the human psyche. <br><br>
+                        
+                        Overall it was a thought-provoking and gripping story that kept me on the edge of my seat. It’s a must-read for people who love psychological thrillers and love a well-written twisty tale.</p>
+            </div>
+        </div><br><br>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <div class="review-meta">
+                            <span><em>Sarvesh Narayan</em></span>
+                            <span class="rating">★★★★½</span>
+                        </div>
+                        <p class="review-excerpt">I first heard about this book from a reel on Instagram, and I searched about it and found out that the book had a good plot twist in the end, so I ordered the book
+                            It’s a short book of 350 pages and it is a page turner for sure
+                            I was heavily invested in the book and the person that is suspected, the most was not the culprit
+                            The way in which the two stories merged together was blasphemous and terrific
+                            Being a savvy reader, I thought that I saw the plot twist, miles ahead but I was proven wrong
+                            The book is a masterpiece and must read!</p>
+                </div>
+            </div><br><br>
+</body>
+</html>
